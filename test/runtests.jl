@@ -6,7 +6,7 @@ ccc4, cccnoisy4 = validate(4, makeplots=false)
   @test ccc4[1] >= 0.9998
   @test ccc4[2] >= 0.8904
   @test ccc4[3] >= 0.9999
-  @test round(cccnoisy4[1], sigdigits=2) >= 0.97
+  @test round(cccnoisy4[1], sigdigits=2) >= 0.76
   @test round(cccnoisy4[2], sigdigits=2) >= 0.70
   @test round(cccnoisy4[3], sigdigits=2) >= 0.97
 end
