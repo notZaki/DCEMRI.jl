@@ -272,7 +272,7 @@ function makeQibaNoisy(n; nRep=10, doOverwrite=true, noiseSigma=-1.0)
     noiseSigma = 0.2 * dceDat[1,1,1] / sqrt(2)
   end
   # Add complex noise
-  Random.seed!(1234567) # Fixed arbitrary seed for reproducible noise
+  Random.seed!(12345) # Fixed arbitrary seed for reproducible noise
   dceDat = dceDat + noiseSigma * ( randn(size(dceDat)) + im*randn(size(dceDat)) )
   # Take the magntude of the complex signal
   dceDat = abs.(dceDat)
